@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-      time:2,
+      time:3,
       clock:'',
       timer:null,
       timerStatus:'',
@@ -16,12 +16,12 @@ Page({
 
   startTimer(){
     this.data.timer=setInterval(()=>{
-      if(this.data.time===0){
+      this.setData({time:this.data.time-1})
+      if(this.data.time<0){
         this.setData({againButtonVisible:true})
        this.clearTimer()
        return
       }
-      this.setData({time:this.data.time-1})
       this.changeTime()
     },1000)
     this.setData({timerStatus:'start'})
@@ -59,8 +59,9 @@ Page({
     this.setData({confirmVisible:false})
   },
   againTimer(){
-    this.setData({time:3000})
-    this.startTimer()
+    this.setData({time:1500})
+    this.changeTime()
+    console.log(this.data.time)
     this.setData({againButtonVisible:false})
   },
   onLoad: function (options) {
