@@ -19,6 +19,7 @@ Page({
       this.setData({time:this.data.time-1})
       if(this.data.time<0){
         this.setData({againButtonVisible:true})
+        this.setData({ finishConfirmVisible: true })
        this.clearTimer()
        return
       }
@@ -57,6 +58,14 @@ Page({
   },
   hideConfirm(){
     this.setData({confirmVisible:false})
+  },
+  confirmFinish(event){
+      let content=event.detail
+      console.log(content)
+      this.setData({finishConfirmVisible:false})
+  },
+  confirmCancel(){
+      this.setData({finishConfirmVisible:false})
   },
   againTimer(){
     this.setData({time:1500})
