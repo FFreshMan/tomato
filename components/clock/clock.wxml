@@ -1,4 +1,4 @@
 <view class='clock' hover-class='active'>
-<text>{{text}}</text>
-<image src="../../images/tomato.png"></image>
+	<text style="font-size:{{fontsize+'rpx'}}">{{text}}</text>
+	<image src="../../images/tomato.png"></image>
 </view>

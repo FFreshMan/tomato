@@ -18,6 +18,6 @@ Component({
       },
       cancel(e){
         this.triggerEvent('cancel','取消')
-      }
+      } 
   }
 })
