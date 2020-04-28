@@ -5,10 +5,29 @@ Page({
    * 页面的初始数据
    */
   data: {
+      account:'',
+      password:'',
+      isRegist:false
+  },
+  watchValue(event){
 
   },
+  watchPassword(event){
 
-  /**
+  },
+  goRegist(){
+    this.setData({isRegist:true})
+  },
+  goSighUp(){
+    this.setData({isRegist:false})
+  },
+  sumit(){
+
+  },
+  regist(){
+
+  }, 
+   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
