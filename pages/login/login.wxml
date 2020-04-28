@@ -8,7 +8,7 @@
   </view>
   <button class='loginButton'
           open-type="getUserInfo"
-          bindgetUserInfo='login'
+          bindgetuserinfo='login'
           withCredential='true'>
           登录
   </button>
